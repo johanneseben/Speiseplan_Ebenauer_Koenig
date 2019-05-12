@@ -15,21 +15,23 @@ namespace Speiseplan_Ebenauer_Koenig
         public Form1()
         {
             InitializeComponent();
+           
         }
 
-        private void btnshutdown_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             Seitenpanel.Top = btnHome.Top;
+            benutzersteuerelement_Home1.BringToFront();
+            
         }
 
         private void btnSpeiseplan_Click(object sender, EventArgs e)
         {
             Seitenpanel.Top = btnSpeiseplan.Top;
+            //benutzersteuereleme.... BringToFront();
+            
         }
 
         private void btnNeuanlage_Click(object sender, EventArgs e)
@@ -40,6 +42,28 @@ namespace Speiseplan_Ebenauer_Koenig
         private void btnBearbeiten_Click(object sender, EventArgs e)
         {
             Seitenpanel.Top = btnBearbeiten.Top;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Height = Screen.PrimaryScreen.WorkingArea.Height;
+            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            this.Location = new Point(0, 0);
+        }
+
+        private void btnShutdown_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnYoutube_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=W7oeoOAxpSs/");
+        }
+
+        private void btnGoogle_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.gesundheit.gv.at/leben/ernaehrung/gesunde-rezepte/inhalt/");
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnShutdown = new System.Windows.Forms.Button();
             this.Seitenpanel = new System.Windows.Forms.Panel();
             this.btnNeuanlage = new System.Windows.Forms.Button();
             this.btnBearbeiten = new System.Windows.Forms.Button();
@@ -39,7 +40,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnshutdown = new System.Windows.Forms.Button();
+            this.btnYoutube = new System.Windows.Forms.Button();
+            this.btnGoogle = new System.Windows.Forms.Button();
+            this.benutzersteuerelement_Home1 = new Speiseplan_Ebenauer_Koenig.Benutzersteuerelement_Home();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Turquoise;
+            this.panel1.Controls.Add(this.btnShutdown);
             this.panel1.Controls.Add(this.Seitenpanel);
             this.panel1.Controls.Add(this.btnNeuanlage);
             this.panel1.Controls.Add(this.btnBearbeiten);
@@ -59,10 +63,27 @@
             this.panel1.Size = new System.Drawing.Size(194, 672);
             this.panel1.TabIndex = 0;
             // 
+            // btnShutdown
+            // 
+            this.btnShutdown.FlatAppearance.BorderSize = 0;
+            this.btnShutdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShutdown.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShutdown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnShutdown.Image = ((System.Drawing.Image)(resources.GetObject("btnShutdown.Image")));
+            this.btnShutdown.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShutdown.Location = new System.Drawing.Point(12, 920);
+            this.btnShutdown.Name = "btnShutdown";
+            this.btnShutdown.Size = new System.Drawing.Size(170, 59);
+            this.btnShutdown.TabIndex = 7;
+            this.btnShutdown.Text = " Beenden";
+            this.btnShutdown.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnShutdown.UseVisualStyleBackColor = true;
+            this.btnShutdown.Click += new System.EventHandler(this.btnShutdown_Click);
+            // 
             // Seitenpanel
             // 
             this.Seitenpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Seitenpanel.Location = new System.Drawing.Point(3, 170);
+            this.Seitenpanel.Location = new System.Drawing.Point(3, 188);
             this.Seitenpanel.Name = "Seitenpanel";
             this.Seitenpanel.Size = new System.Drawing.Size(10, 60);
             this.Seitenpanel.TabIndex = 3;
@@ -75,7 +96,7 @@
             this.btnNeuanlage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNeuanlage.Image = ((System.Drawing.Image)(resources.GetObject("btnNeuanlage.Image")));
             this.btnNeuanlage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNeuanlage.Location = new System.Drawing.Point(23, 325);
+            this.btnNeuanlage.Location = new System.Drawing.Point(23, 343);
             this.btnNeuanlage.Name = "btnNeuanlage";
             this.btnNeuanlage.Size = new System.Drawing.Size(184, 59);
             this.btnNeuanlage.TabIndex = 6;
@@ -92,11 +113,11 @@
             this.btnBearbeiten.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBearbeiten.Image = ((System.Drawing.Image)(resources.GetObject("btnBearbeiten.Image")));
             this.btnBearbeiten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBearbeiten.Location = new System.Drawing.Point(23, 402);
+            this.btnBearbeiten.Location = new System.Drawing.Point(26, 420);
             this.btnBearbeiten.Name = "btnBearbeiten";
             this.btnBearbeiten.Size = new System.Drawing.Size(170, 59);
             this.btnBearbeiten.TabIndex = 5;
-            this.btnBearbeiten.Text = "   Bearbeiten";
+            this.btnBearbeiten.Text = "  Bearbeiten";
             this.btnBearbeiten.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBearbeiten.UseVisualStyleBackColor = true;
             this.btnBearbeiten.Click += new System.EventHandler(this.btnBearbeiten_Click);
@@ -109,7 +130,7 @@
             this.btnSpeiseplan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSpeiseplan.Image = ((System.Drawing.Image)(resources.GetObject("btnSpeiseplan.Image")));
             this.btnSpeiseplan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSpeiseplan.Location = new System.Drawing.Point(17, 245);
+            this.btnSpeiseplan.Location = new System.Drawing.Point(17, 263);
             this.btnSpeiseplan.Name = "btnSpeiseplan";
             this.btnSpeiseplan.Size = new System.Drawing.Size(177, 59);
             this.btnSpeiseplan.TabIndex = 4;
@@ -126,7 +147,7 @@
             this.btnHome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(12, 171);
+            this.btnHome.Location = new System.Drawing.Point(12, 189);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(182, 59);
             this.btnHome.TabIndex = 2;
@@ -141,7 +162,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(194, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(883, 21);
+            this.panel2.Size = new System.Drawing.Size(1230, 29);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -168,40 +189,68 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 131);
+            this.label1.Location = new System.Drawing.Point(11, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Speiseplan";
             // 
-            // btnshutdown
+            // btnYoutube
             // 
-            this.btnshutdown.FlatAppearance.BorderSize = 0;
-            this.btnshutdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnshutdown.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnshutdown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnshutdown.Image = ((System.Drawing.Image)(resources.GetObject("btnshutdown.Image")));
-            this.btnshutdown.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnshutdown.Location = new System.Drawing.Point(997, 27);
-            this.btnshutdown.Name = "btnshutdown";
-            this.btnshutdown.Size = new System.Drawing.Size(58, 51);
-            this.btnshutdown.TabIndex = 7;
-            this.btnshutdown.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnshutdown.UseVisualStyleBackColor = true;
-            this.btnshutdown.Click += new System.EventHandler(this.btnshutdown_Click);
+            this.btnYoutube.FlatAppearance.BorderSize = 0;
+            this.btnYoutube.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYoutube.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYoutube.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnYoutube.Image = ((System.Drawing.Image)(resources.GetObject("btnYoutube.Image")));
+            this.btnYoutube.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYoutube.Location = new System.Drawing.Point(521, 84);
+            this.btnYoutube.Name = "btnYoutube";
+            this.btnYoutube.Size = new System.Drawing.Size(234, 71);
+            this.btnYoutube.TabIndex = 6;
+            this.btnYoutube.Text = " Gesunde Ernährung";
+            this.btnYoutube.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnYoutube.UseVisualStyleBackColor = true;
+            this.btnYoutube.Click += new System.EventHandler(this.btnYoutube_Click);
+            // 
+            // btnGoogle
+            // 
+            this.btnGoogle.FlatAppearance.BorderSize = 0;
+            this.btnGoogle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoogle.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoogle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGoogle.Image = ((System.Drawing.Image)(resources.GetObject("btnGoogle.Image")));
+            this.btnGoogle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGoogle.Location = new System.Drawing.Point(843, 84);
+            this.btnGoogle.Name = "btnGoogle";
+            this.btnGoogle.Size = new System.Drawing.Size(234, 71);
+            this.btnGoogle.TabIndex = 7;
+            this.btnGoogle.Text = " Gesunde Rezepte";
+            this.btnGoogle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGoogle.UseVisualStyleBackColor = true;
+            this.btnGoogle.Click += new System.EventHandler(this.btnGoogle_Click);
+            // 
+            // benutzersteuerelement_Home1
+            // 
+            this.benutzersteuerelement_Home1.Location = new System.Drawing.Point(194, 189);
+            this.benutzersteuerelement_Home1.Name = "benutzersteuerelement_Home1";
+            this.benutzersteuerelement_Home1.Size = new System.Drawing.Size(1230, 629);
+            this.benutzersteuerelement_Home1.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 672);
-            this.Controls.Add(this.btnshutdown);
+            this.ClientSize = new System.Drawing.Size(1424, 672);
+            this.Controls.Add(this.benutzersteuerelement_Home1);
+            this.Controls.Add(this.btnGoogle);
+            this.Controls.Add(this.btnYoutube);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Speiseplan";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -222,7 +271,10 @@
         private System.Windows.Forms.Button btnSpeiseplan;
         private System.Windows.Forms.Button btnNeuanlage;
         private System.Windows.Forms.Panel Seitenpanel;
-        private System.Windows.Forms.Button btnshutdown;
+        private System.Windows.Forms.Button btnShutdown;
+        private System.Windows.Forms.Button btnYoutube;
+        private System.Windows.Forms.Button btnGoogle;
+        private Benutzersteuerelement_Home benutzersteuerelement_Home1;
     }
 }
 
