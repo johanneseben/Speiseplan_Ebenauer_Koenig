@@ -15,7 +15,7 @@ namespace Speiseplan_Ebenauer_Koenig
         public Form1()
         {
             InitializeComponent();
-           
+            benutzersteuerelement_Home1.BringToFront();
         }
 
         
@@ -30,8 +30,8 @@ namespace Speiseplan_Ebenauer_Koenig
         private void btnSpeiseplan_Click(object sender, EventArgs e)
         {
             Seitenpanel.Top = btnSpeiseplan.Top;
-            //benutzersteuereleme.... BringToFront();
-            
+            benutzersteuerelement_Speiseplan1.BringToFront();
+
         }
 
         private void btnNeuanlage_Click(object sender, EventArgs e)

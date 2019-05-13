@@ -43,6 +43,7 @@
             this.btnYoutube = new System.Windows.Forms.Button();
             this.btnGoogle = new System.Windows.Forms.Button();
             this.benutzersteuerelement_Home1 = new Speiseplan_Ebenauer_Koenig.Benutzersteuerelement_Home();
+            this.benutzersteuerelement_Speiseplan1 = new Speiseplan_Ebenauer_Koenig.Benutzersteuerelement_Speiseplan();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,9 +97,9 @@
             this.btnNeuanlage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNeuanlage.Image = ((System.Drawing.Image)(resources.GetObject("btnNeuanlage.Image")));
             this.btnNeuanlage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNeuanlage.Location = new System.Drawing.Point(23, 343);
+            this.btnNeuanlage.Location = new System.Drawing.Point(20, 343);
             this.btnNeuanlage.Name = "btnNeuanlage";
-            this.btnNeuanlage.Size = new System.Drawing.Size(184, 59);
+            this.btnNeuanlage.Size = new System.Drawing.Size(195, 59);
             this.btnNeuanlage.TabIndex = 6;
             this.btnNeuanlage.Text = "   Neuanlage";
             this.btnNeuanlage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -113,9 +114,9 @@
             this.btnBearbeiten.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBearbeiten.Image = ((System.Drawing.Image)(resources.GetObject("btnBearbeiten.Image")));
             this.btnBearbeiten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBearbeiten.Location = new System.Drawing.Point(26, 420);
+            this.btnBearbeiten.Location = new System.Drawing.Point(21, 420);
             this.btnBearbeiten.Name = "btnBearbeiten";
-            this.btnBearbeiten.Size = new System.Drawing.Size(170, 59);
+            this.btnBearbeiten.Size = new System.Drawing.Size(184, 59);
             this.btnBearbeiten.TabIndex = 5;
             this.btnBearbeiten.Text = "  Bearbeiten";
             this.btnBearbeiten.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -130,9 +131,9 @@
             this.btnSpeiseplan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSpeiseplan.Image = ((System.Drawing.Image)(resources.GetObject("btnSpeiseplan.Image")));
             this.btnSpeiseplan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSpeiseplan.Location = new System.Drawing.Point(17, 263);
+            this.btnSpeiseplan.Location = new System.Drawing.Point(14, 266);
             this.btnSpeiseplan.Name = "btnSpeiseplan";
-            this.btnSpeiseplan.Size = new System.Drawing.Size(177, 59);
+            this.btnSpeiseplan.Size = new System.Drawing.Size(186, 59);
             this.btnSpeiseplan.TabIndex = 4;
             this.btnSpeiseplan.Text = "Speiseplan";
             this.btnSpeiseplan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -236,11 +237,19 @@
             this.benutzersteuerelement_Home1.Size = new System.Drawing.Size(1230, 629);
             this.benutzersteuerelement_Home1.TabIndex = 8;
             // 
+            // benutzersteuerelement_Speiseplan1
+            // 
+            this.benutzersteuerelement_Speiseplan1.Location = new System.Drawing.Point(194, 189);
+            this.benutzersteuerelement_Speiseplan1.Name = "benutzersteuerelement_Speiseplan1";
+            this.benutzersteuerelement_Speiseplan1.Size = new System.Drawing.Size(1230, 646);
+            this.benutzersteuerelement_Speiseplan1.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1424, 672);
+            this.Controls.Add(this.benutzersteuerelement_Speiseplan1);
             this.Controls.Add(this.benutzersteuerelement_Home1);
             this.Controls.Add(this.btnGoogle);
             this.Controls.Add(this.btnYoutube);
@@ -275,6 +284,7 @@
         private System.Windows.Forms.Button btnYoutube;
         private System.Windows.Forms.Button btnGoogle;
         private Benutzersteuerelement_Home benutzersteuerelement_Home1;
+        private Benutzersteuerelement_Speiseplan benutzersteuerelement_Speiseplan1;
     }
 }
 

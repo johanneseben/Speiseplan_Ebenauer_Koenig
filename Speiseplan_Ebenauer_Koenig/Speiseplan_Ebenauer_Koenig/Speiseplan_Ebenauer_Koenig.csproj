@@ -52,6 +52,12 @@
     <Compile Include="Benutzersteuerelement_Home.Designer.cs">
       <DependentUpon>Benutzersteuerelement_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Benutzersteuerelement_Speiseplan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Benutzersteuerelement_Speiseplan.Designer.cs">
+      <DependentUpon>Benutzersteuerelement_Speiseplan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Benutzersteuerelement_Home.resx">
       <DependentUpon>Benutzersteuerelement_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Benutzersteuerelement_Speiseplan.resx">
+      <DependentUpon>Benutzersteuerelement_Speiseplan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
